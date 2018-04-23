@@ -74,7 +74,9 @@ function fish_prompt
         set arrow "$arrow_color($__last_command_exit_status) ➜ "
     end
 
+    set user "$green$USER"
     if test "$USER" = 'root'
+        set user "$red$USER"
         set arrow "$arrow_color# "
     end
 
@@ -103,6 +105,9 @@ function fish_prompt
         set virtual_env "$yellow ($venv_name)"
     end
 
-    echo -s $cwd $virtual_env $repo_info $normal ' ' $arrow ' ' $normal
+    if not set -q __fish_prompt_hostname
+        set short_hostname (hostname|cut -d . -f 1)
+        set -g __fish_prompt_hostname "$green$short_hostname"
+    end
+    echo -s $user $normal '@' $__fish_prompt_hostname ' ' $cwd $virtual_env $repo_info $normal ' ' $arrow ' ' $normal
 end
-

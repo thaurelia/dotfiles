@@ -1,0 +1,23 @@
+{
+    // Editor
+    "editor.cursorBlinking": "solid",
+    "editor.emptySelectionClipboard": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        72, 79, 99
+    ],
+    "editor.wordWrap": "on",
+    // Workbench
+    "workbench.colorTheme": "Dracula",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tips.enabled": false,
+    // Files
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    // Telemetry
+    "telemetry.enableTelemetry": false
+}
