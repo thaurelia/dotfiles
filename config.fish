@@ -6,7 +6,7 @@ set -gx LANG "en_US.UTF-8"
 
 function proj
     if not test -d /Volumes/projects
-        hdiutil attach --quiet ~/Documents/projects.dmg
+        hdiutil attach -quiet ~/Documents/projects.dmg
     end
     cd /Volumes/projects
 end
