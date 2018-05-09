@@ -4,6 +4,17 @@ set -gx EDITOR /usr/local/bin/nvim
 set -gx PATH $PATH /usr/local/sbin
 set -gx LANG "en_US.UTF-8"
 
+function proj
+    if not test -d /Volumes/projects
+        hdiutil attach --quiet ~/Documents/projects.dmg
+    end
+    cd /Volumes/projects
+end
+
+function home
+    cd ~
+end
+
 # Custom shell prompt based on Robyrussel
 function fish_prompt
     set -l __last_command_exit_status $status
