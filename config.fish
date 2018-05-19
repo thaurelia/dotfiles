@@ -3,6 +3,7 @@ set fish_greeting
 set -gx EDITOR /usr/local/bin/nvim
 set -gx PATH $PATH /usr/local/sbin
 set -gx LANG "en_US.UTF-8"
+set -gx LC_ALL "en_US.UTF-8"
 
 function proj
     if not test -d /Volumes/projects
@@ -120,5 +121,6 @@ function fish_prompt
         set short_hostname (hostname|cut -d . -f 1)
         set -g __fish_prompt_hostname "$green$short_hostname"
     end
-    echo -s $user $normal '@' $__fish_prompt_hostname ' ' $cwd $virtual_env $repo_info $normal ' ' $arrow ' ' $normal
+    echo -s $user $normal '@' $__fish_prompt_hostname ' ' $cwd $virtual_env $repo_info
+    echo -s $arrow ' ' $normal
 end
