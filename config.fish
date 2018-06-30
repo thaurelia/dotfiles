@@ -1,7 +1,7 @@
 set fish_greeting
 
-set -gx EDITOR /usr/local/bin/nvim
-set -gx PATH $PATH /usr/local/sbin
+set -gx EDITOR /usr/local/bin/code
+set -gx PATH $PATH /usr/local/sbin /opt/metasploit-framework/bin
 set -gx LANG "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 
@@ -10,10 +10,6 @@ function proj
         hdiutil attach -quiet ~/Documents/projects.dmg
     end
     cd /Volumes/projects
-end
-
-function home
-    cd ~
 end
 
 # Custom shell prompt based on Robyrussel
