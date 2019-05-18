@@ -2,18 +2,20 @@
     // Editor
     "editor.cursorBlinking": "solid",
     "editor.emptySelectionClipboard": false,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "SF Mono",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
     "editor.rulers": [
-        72, 79
+        72,
+        79
     ],
     "editor.wordWrap": "on",
     "editor.codeActionsOnSave": {
         "source.organizeImports": true
     },
+    "editor.formatOnSave": true,
     // Workbench
     "workbench.colorTheme": "One Dark Pro",
     "workbench.colorCustomizations": {
@@ -34,12 +36,15 @@
         "**/__pycache__": true,
         "**/venv": true,
         "**/.vscode": true
-      },
+    },
     // Telemetry
     "telemetry.enableTelemetry": false,
     // Python
     "python.linting.enabled": false,
+    // Gitlens
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
-    }
+    },
+    "gitlens.codeLens.enabled": false,
+    "gitlens.hovers.enabled": false
 }
